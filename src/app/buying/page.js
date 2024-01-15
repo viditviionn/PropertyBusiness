@@ -17,7 +17,7 @@ const Buying = () => {
 
     const handleNavigation = () => {
       // Example: Navigate to the '/about' page
-      router.push('/contact?/=meetingform');
+      router.push('/contact/meetingform');
     };
 
 
