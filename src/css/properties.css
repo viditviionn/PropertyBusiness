@@ -1,0 +1,41 @@
+.text-underline{
+    text-decoration:underline;
+    text-decoration-color: blue; 
+    text-decoration-thickness: 2px;
+    text-underline-offset: 7px;
+}
+
+
+h3 {
+    text-align: left;
+    display: block; /* This is usually the default, but it's good to be explicit */
+    clear: both; /* This ensures that the h3 element will not be next to floated elements */
+    margin-top: 20px; /* Adjust as needed for spacing above the h3 element */
+    text-decoration: underline;
+    text-decoration-color: cornflowerblue;
+}
+
+
+.property-image {
+    width: 100%; /* Ensures the image takes the full width of its container */
+    height: 50vh; /* Maintains the aspect ratio of the image */
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+}
+
+#button-left {
+    float: left;
+    margin-right: 10px; /* Adds space to the right of the button */
+    margin-bottom: 20px; /* Adds space below the button */
+    clear: both; /* Ensures the button doesn't overlap with floated elements */
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Ensure paragraphs have proper spacing */
+.page p {
+    margin-bottom: 20px;
+}

@@ -14,8 +14,12 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import MessageIcon from '@mui/icons-material/Message';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import Link from 'next/link';
+import '../css/navbar.css'
 
-const pages = ['Buying', 'Selling', 'Renting Out','Renting','Properties','Relocating','About us','Contact'];
+const pages = ['Buying', 'Selling', 'RentingOut', 'Renting', 'Properties', 'Relocating', 'Aboutus', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
@@ -46,7 +50,7 @@ function Navbar() {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -122,17 +126,33 @@ function Navbar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                <Link href={`/${page.toLowerCase()}`} style={{ color: 'inherit' }}>
+                  {page}
+                </Link>
               </Button>
             ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+
+            {/* Add Message Icon */}
+            <Tooltip title="Messages">
+              <IconButton color="inherit">
+                <MessageIcon />
+              </IconButton>
+            </Tooltip>
+
+            {/* Add WhatsApp Icon */}
+            <Tooltip title="WhatsApp">
+              <IconButton color="inherit">
+                <WhatsAppIcon />
+              </IconButton>
+            </Tooltip>
+            {/* <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
-            </Tooltip>
+            </Tooltip> */}
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"

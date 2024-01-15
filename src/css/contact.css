@@ -1,0 +1,45 @@
+.message-block{
+width: 100%;
+
+}
+
+
+
+.css-wb57ya-MuiFormControl-root-MuiTextField-root {
+    margin-top: 20px;
+    margin-bottom: 20px;
+width: 50%;
+
+}
+.css-wb57ya-MuiFormControl-root-MuiTextField-root{
+    margin-top: 20px;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+    height: 150px;
+    margin-bottom: 20px;
+}
+.contact-nameemail{
+    display: flex;
+    justify-content: space-around;
+    color: gray;
+}
+
+.contact-details{
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-housedetail{
+    display: contents;
+}
+.contact-icons{
+    display: inherit;
+    margin-top: 2px;
+
+}
+.css-wb57ya-MuiFormControl-root-MuiTextField-root {
+    width: 100%;
+}
