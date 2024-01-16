@@ -1,3 +1,16 @@
 .css-19r6kue-MuiContainer-root {
-background-color: rgb(161, 104, 104);
+background-color:white
+}
+
+
+
+
+.all-links{
+    color: grey;
+    text-decoration: none;
+
+}
+.all-links:hover {
+    color: yellowgreen;
+    text-decoration: underline;
 }

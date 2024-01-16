@@ -13,11 +13,12 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+// import House from '@mui/icons-material/Adb';
 import MessageIcon from '@mui/icons-material/Message';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Link from 'next/link';
 import '../css/navbar.css'
+import House from '@mui/icons-material/House';
 
 const pages = ['Buying', 'Selling', 'RentingOut', 'Renting', 'Properties', 'Relocating', 'Aboutus', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -45,7 +46,7 @@ function Navbar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <House color='primary' sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -56,12 +57,12 @@ function Navbar() {
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
+              // letterSpacing: '.3rem',
+              color: 'Yellowgreen',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Property
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -100,7 +101,7 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <House color='primary' sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -113,11 +114,11 @@ function Navbar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'Yellowgreen',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Property
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -126,7 +127,7 @@ function Navbar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link href={`/${page.toLowerCase()}`} style={{ color: 'inherit' }}>
+                <Link className='all-links' href={`/${page.toLowerCase()}`}>
                   {page}
                 </Link>
               </Button>
@@ -138,14 +139,14 @@ function Navbar() {
             {/* Add Message Icon */}
             <Tooltip title="Messages">
               <IconButton color="inherit">
-                <MessageIcon />
+                <MessageIcon color='primary' />
               </IconButton>
             </Tooltip>
 
             {/* Add WhatsApp Icon */}
             <Tooltip title="WhatsApp">
               <IconButton color="inherit">
-                <WhatsAppIcon />
+                <WhatsAppIcon color='primary'/>
               </IconButton>
             </Tooltip>
             {/* <Tooltip title="Open settings">

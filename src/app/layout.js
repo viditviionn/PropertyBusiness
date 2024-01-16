@@ -6,6 +6,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import '../css/common.css'
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -22,6 +23,10 @@ export default function RootLayout({ children }) {
         <Navbar />
         </header>
         {children}
+
+        <footer>
+          <Footer />
+        </footer>
       
       </body>
     </html>
