@@ -3,8 +3,6 @@ width: 100%;
 
 }
 
-
-
 .css-wb57ya-MuiFormControl-root-MuiTextField-root {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -42,4 +40,19 @@ width: 50%;
 }
 .css-wb57ya-MuiFormControl-root-MuiTextField-root {
     width: 100%;
+}
+.divide-in-two{
+    width: 100%;
+    margin-top: 0px;
+    display: inline-flex;
+}
+
+@media screen and (max-width: 480px) {
+    .divide-in-two{
+        display: flex;
+        flex-direction: column;
+
+
+    }
+    
 }

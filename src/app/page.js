@@ -1,8 +1,19 @@
+"use client"
+
 import { Button } from '@mui/material'
 import m2 from '../../public/images/pageImages/m2.jpg'
 import Image from 'next/image'
 import '../css/home.css'
+import {useRouter} from 'next/navigation'
+
 export default function Home() {
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    // Example: Navigate to the '/about' page
+    router.push('/contact/meetingform');
+  };
+
   return (
     <div>
       <div>
@@ -14,7 +25,7 @@ export default function Home() {
         A home in India
       </div>
       <div className='image-button'>
-        <Button variant='contained'>Book a free Meeting</Button>
+        <Button onClick={handleNavigation} variant='contained'>Book a free Meeting</Button>
       </div>
       <div className='content-button wrapper'>
 

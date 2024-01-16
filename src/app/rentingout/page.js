@@ -33,7 +33,7 @@ export default function page() {
                 </div>
 
                 <div onClick={handleNavigation} className='image-button'>
-                    <Button variant='contained'>Book Now</Button>
+                    <Button onClick={handleNavigation} variant='contained'>Book Now</Button>
                 </div>
             </div>
 
