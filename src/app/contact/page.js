@@ -13,7 +13,7 @@ import { useSearchParams, usePathname } from 'next/navigation';
 import axios from 'axios'
 
 
-export default function Page() {
+export default function Page({ repo }) {
 
     const [message_sent,setMessage_sent]=useState(false)
 
@@ -39,11 +39,8 @@ export default function Page() {
         }
         catch(error){
             console.log(error)
-        }
-        
+        }   
     }
-
-
     // contact form 
     const Contact_Form = <div>
         <div className="text-underlined">Contact Form</div>
@@ -149,7 +146,6 @@ export default function Page() {
         </form>
 }
     </div>
-
     return (
 
         //show forms
@@ -164,4 +160,21 @@ export default function Page() {
 
 
     );
+
+    
 }
+// export async function getServerSideProps() {
+//     // Fetch data from external API
+
+//     try{
+//         const res = await fetch('/api/emailsend',data_to_be_sent)
+//         const repo = await res.json()
+//     }
+//     catch(error){
+//         const repo=error;
+//     }
+   
+//     // Pass data to the page via props
+//     return { props: { repo } }
+//   }
+   

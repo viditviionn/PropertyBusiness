@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react";
-import m1 from '../../../public/images/pageImages/m1.jpg'
+import m3 from '../../../public/images/pageImages/m3.jpg'
 import selling_small from '../../../public/images/otherimages/selling_small.jpg'
 
 import { Box, Button, Grid } from "@mui/material";
@@ -26,7 +26,7 @@ export default function page() {
         <div className="page">
             <div>
                 <div>
-                    <Image src={m1} alt='m1 image' />
+                    <Image src={m3} alt='m3 image' />
                 </div>
                 <div className='image-text'>
                     SChedule meeting to buy a home in India

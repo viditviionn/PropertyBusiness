@@ -46,7 +46,7 @@ function Navbar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <House color='primary' sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+        <Link href='/'><House color='primary' sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /></Link>
           <Typography
             variant="h6"
             noWrap
@@ -105,7 +105,7 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          <House color='primary' sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <Link href='/'><House color='primary' sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /></Link>
           <Typography
             variant="h5"
             noWrap
@@ -143,14 +143,14 @@ function Navbar() {
             {/* Add Message Icon */}
             <Tooltip title="Messages">
               <IconButton color="inherit">
-                <MessageIcon color='primary' />
+                <MessageIcon className='whats-app-icon' color='primary' />
               </IconButton>
             </Tooltip>
 
             {/* Add WhatsApp Icon */}
             <Tooltip title="WhatsApp">
               <IconButton color="inherit">
-                <WhatsAppIcon color='primary'/>
+                <WhatsAppIcon className='whats-app-icon' color='primary'/>
               </IconButton>
             </Tooltip>
             {/* <Tooltip title="Open settings">
