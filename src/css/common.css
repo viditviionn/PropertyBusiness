@@ -29,7 +29,6 @@ img{
     border: 2px solid #2196F3; /* Change this color to match your outlined button color */
 }
 
-
 p {
     clear: both;
     margin-top: 20px;
@@ -45,9 +44,6 @@ p {
 
 
 
-.content-button-wrapper{
-    display: flex;
-}
 
 .text-underlined{
     margin-top: 20px;
@@ -88,3 +84,24 @@ p {
     display: inline-flex;
     justify-content: flex-end;
 }
+
+
+@media screen and (max-width:600px) {
+    .image-text{
+        font-size:20px
+    }
+    .image-button button{
+        width: 50%;
+        height:50%;
+        font-size:50%;
+        border-radius: 50%;
+    }
+    .image-button button:hover{
+        width: 50%;
+        height:50%;
+        font-size:75%;
+        border-radius: 50%;
+    }
+}
+
+/* footer media query likkni h abi */

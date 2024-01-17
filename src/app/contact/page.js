@@ -74,16 +74,16 @@ export default function Page() {
                         <div className='text-underlined'>Contact Details</div>
                         <div className='contact-details'>
                             <div className='contact-icons'>
-                                <MailIcon /> abc@gmail.com
+                                <MailIcon color='primary' /> abc@gmail.com
                             </div>
                             <div className='contact-icons'>
-                                <PhoneIcon />+31(0) 20 760 8282
+                                <PhoneIcon color='primary' />+31(0) 20 760 8282
                             </div>
                             <div className='contact-icons'>
-                                <PublicIcon />welocate.com
+                                <PublicIcon color='primary' />welocate.com
                             </div>
                             <div className='contact-icons'>
-                                <HouseIcon />
+                                <HouseIcon color='primary' />
                                 <div className='contact-housedetail'>
                                     Schweitzerlaan 76 1187 JD AmstelveenNetherlands
                                 </div>

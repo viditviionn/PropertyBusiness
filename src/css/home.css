@@ -2,10 +2,13 @@
     float: right;
     display: flex;
     flex-direction: column;
-    justify-content: right;
     width: 20%;
 
 }
+.content-button-wrapper{
+    display: inline-flex;
+}
+
 
 .button-group-right button{
    margin-top: 15%;

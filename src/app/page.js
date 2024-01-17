@@ -4,10 +4,10 @@ import { Button } from '@mui/material'
 import m2 from '../../public/images/pageImages/m2.jpg'
 import Image from 'next/image'
 import '../css/home.css'
-import {useRouter} from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
-  console.log('envvvvv',process.env.GMAIL_APP_PASSWORD)
+  console.log('envvvvv', process.env.GMAIL_APP_PASSWORD)
 
   const router = useRouter();
 
@@ -29,17 +29,19 @@ export default function Home() {
       <div className='image-button'>
         <Button onClick={handleNavigation} variant='contained'>Book a free Meeting</Button>
       </div>
-      <div className='content-button wrapper'>
+      <div className='content-button-wrapper'>
 
 
-        <p className='content-written'>
-          Whether you have just moved to the Netherlands and about to rent or have been here for a few years and are ready to buy a new home, we are here for you.
-          Our packages for buying, selling, renting out and renting are customised to your specific requirements and providing everything you need at a fixed and transparent price.
-        </p>
+        <div className='wid-75'>
+          <p className='content-written '>
+            Whether you have just moved to the Netherlands and about to rent or have been here for a few years and are ready to buy a new home, we are here for you.
+            Our packages for buying, selling, renting out and renting are customised to your specific requirements and providing everything you need at a fixed and transparent price.
+          </p>
 
-        <p>Whether you are moving to Amsterdam, The Hague, Rotterdam or anywhere else in the Netherlands, we have a network of local agents that will help you with everything you need.
-        </p>
-        <div className='button-group-right'>
+          <p className='content-written'>Whether you are moving to Amsterdam, The Hague, Rotterdam or anywhere else in the Netherlands, we have a network of local agents that will help you with everything you need.
+          </p>
+        </div>
+        <div className='button-group-right wid-25'>
           <Button variant='contained'>Contact Us</Button>
           <Button variant='contained'>Send Us message</Button>
           <Button variant='contained'>Request a Service</Button>

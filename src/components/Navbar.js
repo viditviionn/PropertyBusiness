@@ -30,17 +30,17 @@ function Navbar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
 
   return (
     <AppBar position="static">
@@ -66,6 +66,8 @@ function Navbar() {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Tooltip title="Links">
+            
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -76,6 +78,7 @@ function Navbar() {
             >
               <MenuIcon className='links-menu' />
             </IconButton>
+            </Tooltip>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -96,7 +99,8 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                  <Link className='all-links' href={`/${page.toLowerCase()}`}>{page}</Link></Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -106,7 +110,7 @@ function Navbar() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -154,7 +158,7 @@ function Navbar() {
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip> */}
-            <Menu
+            {/* <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -175,7 +179,7 @@ function Navbar() {
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
           </Box>
         </Toolbar>
       </Container>
