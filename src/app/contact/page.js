@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, TextField, Typography } from '@mui/material';
 import '../../css/contact.css'
 import MailIcon from '@mui/icons-material/Mail';
@@ -10,19 +10,37 @@ import Datepicker from '../../components/Datepicker'
 
 import HouseIcon from '@mui/icons-material/House';
 import { useSearchParams, usePathname } from 'next/navigation';
+import axios from 'axios'
+
 
 export default function Page() {
 
-    const handleform=(e)=>{
+    const [message_sent,setMessage_sent]=useState(false)
+
+    const handleform=async (e)=>{
         e.preventDefault()
         const data=new FormData(e.currentTarget)
         
         const data_to_be_sent={
             name:data.get('name'),
             email:data.get('email'),
-            telephone:data.get('telephone')
+            telephone:data.get('telephone'),
+            found_through:data.get('found_through'),
+            text:data.get('message')
         }
-        console.log(data_to_be_sent)
+        try{
+            const response=await axios.post('/api/emailsend',data_to_be_sent);
+                console.log(response.data)
+        if(response.data.message==='Email sent successfully'){
+            
+            setMessage_sent(true)
+        }
+
+        }
+        catch(error){
+            console.log(error)
+        }
+        
     }
 
 
@@ -33,6 +51,9 @@ export default function Page() {
         <p >
             Do you have questions about any of our products and services? You can either call us directly or complete the form below and we promise to call you back within 1 hour during office hours. Outside of office hours we will respond by email, or if it's urgent, we will call you.
         </p>
+    
+
+    {message_sent? <p>Message is sent Succesffuly Thankyou</p>:
 
         <form onSubmit={handleform}>
             <Grid item container spacing={2}>
@@ -54,12 +75,12 @@ export default function Page() {
                     </div>
                     <div className='divide-in-two'>
                         <TextField name='telephone' fullWidth size='small' variant='outlined' label='Telephone' />
-                        <TextField fullWidth size='small' variant='outlined' label='' />
+                        <TextField name='found_through' fullWidth size='small' variant='outlined' label='Found Through' />
                     </div>
-                    <div className='contact-nameemail'>
+                    <div  className='contact-nameemail'>
                         <div > Message us For more Information</div>
                     </div>
-                    <TextField className='message-block' variant='outlined' label='Message' />
+                    <TextField name='message' className='message-block' variant='outlined' label='Message' />
                     <div >
                         <Button type='submit' variant='contained' >Send Us a Message</Button>
                     </div>
@@ -126,6 +147,7 @@ export default function Page() {
                 </Grid>
             </Grid>
         </form>
+}
     </div>
 
     return (

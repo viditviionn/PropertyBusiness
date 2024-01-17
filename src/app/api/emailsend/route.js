@@ -2,9 +2,12 @@ import { NextResponse } from "next/server";
 import nodemailer from 'nodemailer';
 
 export async function POST(req,res) {
-    console.log('req.bodyyyyy',req.body)
 
-  const { to, subject, text } = req.body;
+  const { found_through, text,name,email,telephone} = await req.json();
+
+  if(!name || !email || !telephone){
+    return NextResponse.json({ error: 'Error sending email' });
+  }
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -17,8 +20,8 @@ export async function POST(req,res) {
   const mailOptions = {
     from: 'just4ujayesh131@gmail.com',
     to:'just4ujayesh131@gmail.com',
-    subject:'helloodockok',
-    text:'swhks',
+    subject:`I found you through${found_through}`,
+    text:`Name:${name} Email:${email} TelephoneNO:${telephone}`,
   };
 
   try {
