@@ -12,6 +12,7 @@
 
 }
 .button-group-right button:hover {
+    font-size: large;
     background-color: transparent;
     color: #21f36b; /* Change this color to match your outlined button color */
     border: 2px solid #2196F3; /* Change this color to match your outlined button color */

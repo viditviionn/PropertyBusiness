@@ -74,7 +74,7 @@ function Navbar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon className='links-menu' />
             </IconButton>
             <Menu
               id="menu-appbar"
