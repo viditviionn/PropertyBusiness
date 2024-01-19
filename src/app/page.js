@@ -7,7 +7,7 @@ import '../css/home.css'
 import { useRouter } from 'next/navigation'
 
 export default function Home() {
-  console.log('envvvvv', process.env.GMAIL_APP_PASSWORD)
+
 
   const router = useRouter();
 

@@ -18,8 +18,8 @@ export async function POST(req,res) {
   });
 
   const mailOptions = {
-    from: 'just4ujayesh131@gmail.com',
-    to:'just4ujayesh131@gmail.com',
+    from:process.env.GMAIL_SENDING_ACCOUNT,
+    to:email,
     subject:`I found you through${found_through}`,
     text:`Name:${name} Email:${email} TelephoneNO:${telephone}`,
   };
