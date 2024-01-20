@@ -61,7 +61,7 @@ const Properties = () => {
             <div style={{clear:'both'}}>
             <div className="text-underlined">Properties for Rent</div>
             </div>
-            <div>
+            <div style={{margin:'20px'}}>
             {images.map((item, index) => {
                 if (index % 2 === 0) {
                     return (
@@ -69,16 +69,16 @@ const Properties = () => {
                             <Grid item xs={12} sm={6}>
                                 <img src={item.image} alt={`p1 image`} className="property-image" />
                                 {item.address}
-                                <div>View location On Map<PublicIcon color="primary" onClick={() => { handlemap(item[1]) }} /></div>
-                                <h3>price</h3> {item.price}
-                                <Button variant="contained" onClick={() => { handlebook(index + 1) }}>Book a Viewing</Button>
+                                  <div style={{color:'blue',fontsize:'5px'}}>View location On Map<PublicIcon color="primary" onClick={() => { handlemap(item.address) }} /></div>
+                                <h3>price  {item.price}</h3>
+                                <Button style={{marginBottom:'10px'}} variant="contained" onClick={() => { handlebook(index + 1) }}>Book a Viewing</Button>
                             </Grid>
                             {index + 1 < images.length && (
                                 <Grid item xs={12} sm={6}>
                                     <img src={images[index + 1].image} alt={`House ${images[index + 1].image}`} className="property-image" />
                                     {images[index + 1].address}
-                                    <div>View location On Map<PublicIcon color='primary' onClick={() => { handlemap(images[index + 1][1]) }} /></div>
-                                    <h3>price</h3> {item.price}
+                                    <div style={{color:'blue',fontsize:'5px'}}>View location On Map<PublicIcon color='primary' onClick={() => { handlemap(images[index + 1].address) }} /></div>
+                                    <h3>price  {item.price}</h3>
                                     <Button variant="contained" onClick={() => { handlebook(index + 1) }}>Book a Viewing</Button>
                                 </Grid>
                             )}
