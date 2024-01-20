@@ -48,7 +48,7 @@ export default function Calculatecost() {
 
   return (
     <React.Fragment>
-      <Button onClick={handleClickOpen('paper')} variant='contained'>Calculate Cost</Button>
+      <Button className='button-green' style={{marginLeft:'30px'}} onClick={handleClickOpen('paper')} variant='contained'>Calculate Cost</Button>
 
       <Dialog
         open={open}

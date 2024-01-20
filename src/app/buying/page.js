@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import m1 from '../../../public/images/pageImages/m1.jpg'
 
 import { Box, Button, Grid } from "@mui/material";
@@ -11,17 +11,9 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 
-const Buying = ({ isServer }) => {
+const Buying = () => {
 
 
-    useEffect(()=>{
-        if (isServer){
-            console.log('server pe h babu')
-        }
-        else{
-            console.log('clientdise')
-        }
-    })
 
     const router = useRouter();
 

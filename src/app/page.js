@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <div className='button-group-right wid-25'>
           <Button variant='contained'>Contact Us</Button>
-          <Button variant='contained'>Send Us message</Button>
+          <Button className='button-green' variant='contained'>Send Us message</Button>
           <Button variant='contained'>Request a Service</Button>
         </div>
       </div>

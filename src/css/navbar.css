@@ -1,5 +1,6 @@
 .css-19r6kue-MuiContainer-root {
-background-color:white
+background-color:white;
+margin-bottom: 7px;
 }
 
 /* .css-8je8zh-MuiTouchRipple-root {
@@ -11,10 +12,7 @@ background-color:white
     background-color: yellowgreen;
 }
 
-.whats-app-icon{
 
-    
-}
 
 .all-links{
     color: grey;

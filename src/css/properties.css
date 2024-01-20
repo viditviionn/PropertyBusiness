@@ -1,19 +1,11 @@
-.text-underline{
+/* .text-underline{
     text-decoration:underline;
     text-decoration-color: blue; 
     text-decoration-thickness: 2px;
     text-underline-offset: 7px;
-}
+} */
 
 
-h3 {
-    text-align: left;
-    display: block; /* This is usually the default, but it's good to be explicit */
-    clear: both; /* This ensures that the h3 element will not be next to floated elements */
-    margin-top: 20px; /* Adjust as needed for spacing above the h3 element */
-    text-decoration: underline;
-    text-decoration-color: cornflowerblue;
-}
 
 
 .property-image {
@@ -27,6 +19,7 @@ h3 {
     float: left;
     margin-right: 10px; /* Adds space to the right of the button */
     margin-bottom: 20px; /* Adds space below the button */
+    margin-left: 30px;
     clear: both; /* Ensures the button doesn't overlap with floated elements */
 }
 .clearfix::after {

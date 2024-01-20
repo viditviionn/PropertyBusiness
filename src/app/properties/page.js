@@ -57,13 +57,15 @@ const Properties = () => {
             <h3 className="text-underlined">Renting a home?</h3>
             <p>Looking for a place to rent? Click below to arrange a meeting and we'll explain how we can help you.</p>
 
-            <Button id='button-left' variant="contained">Book a Meeting</Button>
-            <h3 className="text-underlined">Properties for Rent</h3>
-
+            <Button id='button-left' className="button-green" variant="contained">Book a Meeting</Button>
+            <div style={{clear:'both'}}>
+            <div className="text-underlined">Properties for Rent</div>
+            </div>
+            <div>
             {images.map((item, index) => {
                 if (index % 2 === 0) {
                     return (
-                        <Grid container spacing={2} key={index}>
+                        <Grid container spacing={4} key={index}>
                             <Grid item xs={12} sm={6}>
                                 <img src={item.image} alt={`p1 image`} className="property-image" />
                                 {item.address}
@@ -89,6 +91,7 @@ const Properties = () => {
 
 
 
+        </div>
         </div>
     );
 }

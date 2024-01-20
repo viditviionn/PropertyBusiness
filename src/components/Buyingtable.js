@@ -29,7 +29,7 @@ export default function Buyingtable() {
 
   return (
     <Container>
-      <TableContainer component={Paper} style={{ overflowX: 'auto' }}>
+      <TableContainer component={Paper} style={{ overflowX: 'auto',marginBottom:'40px' }}>
         <Table sx={{ minWidth: isSmallScreen ? 300 : 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>

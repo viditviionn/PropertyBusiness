@@ -43,7 +43,7 @@ function Navbar() {
   // };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{backgroundColor:'white',boxShadow:'none'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <Link href='/'><House color='primary' sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /></Link>
