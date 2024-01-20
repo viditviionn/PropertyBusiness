@@ -4,6 +4,8 @@ import RemoveRedEyeSharpIcon from '@mui/icons-material/RemoveRedEyeSharp';
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 import p5 from '../../../public/images/propertyImages/p5.jpg'
 import Image from "next/image";
+import Avatar from '@mui/material/Avatar';
+import Rating from '@mui/material/Rating';
 
 
 export default function aboutus() {
@@ -56,8 +58,145 @@ export default function aboutus() {
 
             </p>
 
-            <div className="text-underlined"> Why Customers Say ?</div>
-            <p>Welcome to our Reviews section! Here, you'll find genuine feedback from our valued customers. Dive in to hear their stories, experiences, and insights about our products and services.</p>
+            <div className='text-underlined'>
+        What Our Customers Say ?
+      </div>
+      <p>Welcome to our Reviews section! Here, you'll find genuine feedback from our valued customers. Dive in to hear their stories, experiences, and insights about our products and services.</p>
+      {/* // Card1# */}
+      <Grid item container>
+        <Grid item xs={12} sm={6} md={4} lg={4}>
+          <div className='rating-card'>
+            <div className='rating-header'>
+              <div className='rating-person'><Avatar sx={{color:'blue'}}>M</Avatar></div>
+              <div>
+                <Rating name="read-only" value={4} readOnly />
+                <div style={{ fontSize: '10px', color: 'grey' }}>13 Sep 2023</div>
+              </div>
+            </div>
+          </div>
+        </Grid>
+
+
+        <Grid item xs={12}sm={6} md={4} lg={4}>
+          <div className='rating-card'>
+            <div className='rating-header'>
+              <div className='rating-person'><Avatar>P</Avatar></div>
+              <div>
+                <Rating name="read-only" value={5} readOnly />
+                <div style={{ fontSize: '10px', color: 'grey' }}>21 Jul 2023</div>
+              </div>
+            </div>
+          </div>
+        </Grid>
+
+
+        <Grid item xs={12} sm={6} md={4} lg={4}>
+          <div className='rating-card'>
+            <div className='rating-header'>
+              <div className='rating-person'><Avatar sx={{color:'green'}}>A</Avatar></div>
+              <div>
+                <Rating name="read-only" value={5} readOnly />
+                <div style={{ fontSize: '10px', color: 'grey' }}>25 june 2023</div>
+              </div>
+            </div>
+          </div>
+        </Grid>
+
+
+        <Grid item xs={12} sm={6} md={4} lg={4}>
+          <div className='rating-card'>
+            <div className='rating-header'>
+              <div className='rating-person'><Avatar sx={{color:'yellow'}}>H</Avatar></div>
+              <div>
+                <Rating name="read-only" value={5} readOnly />
+                <div style={{ fontSize: '10px', color: 'grey' }}>25 feb 2023</div>
+              </div>
+            </div>
+          </div>
+        </Grid>
+
+
+        <Grid item xs={12} sm={6} md={4} lg={4}>
+          <div className='rating-card'>
+            <div className='rating-header'>
+              <div className='rating-person'><Avatar sx={{color:'coral'}}>A</Avatar></div>
+              <div>
+                <Rating name="read-only" value={3} readOnly />
+                <div style={{ fontSize: '10px', color: 'grey' }}>31jan 2023</div>
+              </div>
+            </div>
+          </div>
+        </Grid>
+
+
+        <Grid item xs={12} sm={6} md={4} lg={4}>
+          <div className='rating-card'>
+            <div className='rating-header'>
+              <div className='rating-person'><Avatar sx={{color:'red'}}>J</Avatar></div>
+              <div>
+                <Rating name="read-only" value={5} readOnly />
+                <div style={{ fontSize: '10px', color: 'grey' }}>12 jan 2023</div>
+              </div>
+            </div>
+          </div>
+        </Grid>
+
+
+        <Grid item xs={12} sm={6} md={4} lg={4}>
+          <div className='rating-card'>
+            <div className='rating-header'>
+              <div className='rating-person'><Avatar sx={{color:'green'}}>S</Avatar></div>
+              <div>
+                <Rating name="read-only" value={4} readOnly />
+                <div style={{ fontSize: '10px', color: 'grey' }}>26 May 2022</div>
+              </div>
+            </div>
+          </div>
+        </Grid>
+
+
+        <Grid item xs={12} sm={6} md={4} lg={4}>
+          <div className='rating-card'>
+            <div className='rating-header'>
+              <div className='rating-person'><Avatar sx={{color:'greenyellow'}}>H</Avatar></div>
+              <div>
+                <Rating name="read-only" value={5} readOnly />
+                <div style={{ fontSize: '10px', color: 'grey' }}>23 April 2022</div>
+              </div>
+            </div>
+          </div>
+        </Grid>
+
+
+
+        <Grid item xs={12} sm={6} md={4} lg={4}>
+          <div className='rating-card'>
+            <div className='rating-header'>
+              <div className='rating-person'><Avatar>A</Avatar></div>
+              <div>
+                <Rating name="read-only" value={5} readOnly />
+                <div style={{ fontSize: '10px', color: 'grey' }}>5 jan 2022</div>
+              </div>
+            </div>
+          </div>
+        </Grid>
+
+
+
+        <Grid item xs={12} sm={6} md={4} lg={4}>
+          <div className='rating-card'>
+            <div className='rating-header'>
+              <div className='rating-person'><Avatar>L</Avatar></div>
+              <div>
+                <Rating name="read-only" value={5} readOnly />
+                <div style={{ fontSize: '10px', color: 'grey' }}>2 Dec 2021</div>
+              </div>
+            </div>
+          </div>
+        </Grid>
+
+
+      </Grid>
 
         </div>
     )

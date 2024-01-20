@@ -117,6 +117,18 @@ p {
 margin-top: 0px;
 margin-left: 0px;
 }
+
+.rating-card{
+    margin-left: 30px;
+    margin-bottom: 30px;
+    width:80%;
+    height: 50px;
+}
+.rating-header{
+    display: inline-flex;
+}
+
+
 @media screen and (max-width:600px) {
     .image-text{
         font-size:20px
