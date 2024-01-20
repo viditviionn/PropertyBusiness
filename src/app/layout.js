@@ -7,6 +7,13 @@ import '@fontsource/roboto/700.css';
 import '../css/common.css'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+// Import necessary Font Awesome modules
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+// Add the icons to the library for easy use throughout your app
+
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {

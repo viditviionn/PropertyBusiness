@@ -18,6 +18,9 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Link from 'next/link';
 import '../css/navbar.css'
 import House from '@mui/icons-material/House';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee,faComment,faCheck} from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faFontAwesome, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 const pages = ['Buying', 'Selling', 'RentingOut', 'Renting', 'Properties', 'Relocating', 'Aboutus', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -139,20 +142,10 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 0 }}>
 
-            {/* Add Message Icon */}
-            <Tooltip title="Messages">
-              <IconButton color="inherit">
-                <MessageIcon className='whats-app-icon' color='primary' />
-              </IconButton>
-            </Tooltip>
-
-            {/* Add WhatsApp Icon */}
-            <Tooltip title="WhatsApp">
-              <IconButton color="inherit">
-                <WhatsAppIcon className='whats-app-icon' color='primary'/>
-              </IconButton>
-            </Tooltip>
-            
+ 
+      <FontAwesomeIcon style={{color:'springgreen',fontSize:'30px'}}icon={faComment} />
+      <FontAwesomeIcon style={{color:'blue',fontSize:'30px'}}icon={faTwitter} />
+      <FontAwesomeIcon style={{color:'springgreen',fontSize:'30px'}}icon={faWhatsapp} />
             {/* <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
