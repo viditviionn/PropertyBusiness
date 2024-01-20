@@ -7,6 +7,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import PublicIcon from '@mui/icons-material/Public';
 import Button from '@mui/material/Button';
 import Datepicker from '../../components/Datepicker'
+import MenuItem from '@mui/material/MenuItem';
 
 import HouseIcon from '@mui/icons-material/House';
 import { useSearchParams, usePathname } from 'next/navigation';
@@ -16,6 +17,8 @@ import axios from 'axios'
 export default function Page({ repo }) {
 
     const [message_sent,setMessage_sent]=useState(false)
+
+    const options=['Website','Broker','Neighbour',"Other Sources"]
 
     const handleform=async (e)=>{
         e.preventDefault()
@@ -42,7 +45,8 @@ export default function Page({ repo }) {
         }   
     }
     // contact form 
-    const Contact_Form = <div>
+    const Contact_Form =
+     <div>
         <div className="text-underlined">Contact Form</div>
 
         <p >
@@ -52,38 +56,65 @@ export default function Page({ repo }) {
 
     {message_sent? <p>Message is sent Succesffuly Thankyou</p>:
 
-        <form onSubmit={handleform}>
-            <Grid item container spacing={2}>
-                {/* Form takes 70% of width */}
-                <Grid item spacing={4} xs={12} sm={8} >
+<form onSubmit={handleform}>
 
-                    <div className='contact-nameemail'>
-                        <div > Name</div>
-                        <div > Email</div>
-                    </div>
+< Grid container spacing={2}>
+{/* Form takes 70% of width */}
+<Grid container spacing={4} xs={12} sm={8}>
+  {/* First Part */}
+  
 
-                    <div className='divide-in-two'>
-                        <TextField name='name' fullWidth size='small' variant='outlined' label='Name' />
-                        <TextField name='email' fullWidth size='small' variant='outlined' label='Email' />
-                    </div>
-                    <div className='contact-nameemail'>
-                        <div > Telephone</div>
-                        <div > How did You find Us?</div>
-                    </div>
-                    <div className='divide-in-two'>
-                        <TextField name='telephone' fullWidth size='small' variant='outlined' label='Telephone' />
-                        <TextField name='found_through' fullWidth size='small' variant='outlined' label='Found Through' />
-                    </div>
-                    <div  className='contact-nameemail'>
-                        <div > Message us For more Information</div>
-                    </div>
-                    <TextField name='message' className='message-block' variant='outlined' label='Message' />
-                    <div >
-                        <Button type='submit' variant='contained' >Send Us a Message</Button>
-                    </div>
+  {/* First Part */}
+  <Grid item xs={12} sm={12} lg={6} md={6}>
+  <div className='contact-nameemail'>
+      <div>Name*</div>
+    </div>
+    <TextField name='name' fullWidth size='small' variant='outlined' label='Name' />
+  </Grid>
+
+  {/* First Part */}
+  <Grid item xs={12} sm={12} lg={6} md={6}>
+  <div className='contact-nameemail'>
+      <div> Email*</div>
+    </div>
+    <TextField name='email' fullWidth size='small' variant='outlined' label='Email' />
+  </Grid>
+
+  {/* First Part */}
+  <Grid item xs={12} sm={12} lg={6} md={6}>
+  <div className='contact-nameemail'>
+      <div> Telephone*</div>
+    </div>
+    <TextField name='telephone' fullWidth size='small' variant='outlined' label='PhoneNO' />
+  </Grid>
+
+  {/* First Part */}
+  <Grid item xs={12} sm={12} lg={6} md={6}>
+  <div className='contact-nameemail'>
+      <div> Found Through*</div>
+    </div>
+   <TextField  select name='found_through' fullWidth size='small' variant='outlined' label='Found Through' >{options.map((option) => (
+        <MenuItem key={option} value={option}>
+          {option}
+        </MenuItem>
+      ))}</TextField>
+  
+  </Grid>
+
+  <Grid item xs={12} sm={12}>
+        <div className='contact-nameemail'>
+          <div> MessageUs</div>
+        </div>
+        <TextField name='text' className='message-block' variant='outlined' label='MessageUs' />
+        <div>
+          <Button type='submit' variant='contained'>Send Us Message</Button>
+        </div>
+      </Grid>
 
 
-                </Grid>
+
+
+  </Grid>
 
                 {/* Contact details take 30% of width */}
                 <Grid item xs={12} sm={4}>

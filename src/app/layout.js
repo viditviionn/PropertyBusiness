@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+      <script src="https://kit.fontawesome.com/3a1c09a610.js" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico" />
 
   </head>
