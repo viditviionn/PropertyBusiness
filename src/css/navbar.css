@@ -12,6 +12,9 @@ margin-bottom: 7px;
     background-color: yellowgreen;
 }
 
+.font-awesome-icons{
+    display: flex;
+}
 
 
 .all-links{

@@ -8,7 +8,6 @@ import '../css/common.css'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 // Import necessary Font Awesome modules
-import { library } from '@fortawesome/fontawesome-svg-core';
 
 // Add the icons to the library for easy use throughout your app
 
@@ -26,7 +25,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <script src="https://kit.fontawesome.com/3a1c09a610.js" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico" />
 
   </head>

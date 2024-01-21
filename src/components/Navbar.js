@@ -19,7 +19,7 @@ import Link from 'next/link';
 import '../css/navbar.css'
 import House from '@mui/icons-material/House';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee,faComment,faCheck} from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faComment, faCheck, faEnvelope, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faFontAwesome, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 const pages = ['Buying', 'Selling', 'RentingOut', 'Renting', 'Properties', 'Relocating', 'Aboutus', 'Contact'];
@@ -45,10 +45,10 @@ function Navbar() {
   // };
 
   return (
-    <AppBar position="static" style={{backgroundColor:'white',boxShadow:'none'}}>
+    <AppBar position="static" style={{ backgroundColor: 'white', boxShadow: 'none' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <Link href='/'><House color='primary' sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /></Link>
+          <Link href='/'><House sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: '45px', color: 'blue' }} /></Link>
           <Typography
             variant="h6"
             noWrap
@@ -68,18 +68,18 @@ function Navbar() {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-          <Tooltip title="Links">
-            
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon className='links-menu' />
-            </IconButton>
+            <Tooltip title="Links">
+
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+              >
+                <MenuIcon className='links-menu' />
+              </IconButton>
             </Tooltip>
             <Menu
               id="menu-appbar"
@@ -102,7 +102,7 @@ function Navbar() {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                  <Link className='all-links' href={`/${page.toLowerCase()}`}>{page}</Link></Typography>
+                    <Link className='all-links' href={`/${page.toLowerCase()}`}>{page}</Link></Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -140,12 +140,14 @@ function Navbar() {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box>
 
- 
-      <FontAwesomeIcon style={{color:'springgreen',fontSize:'30px'}}icon={faComment} />
-      <FontAwesomeIcon style={{color:'blue',fontSize:'30px'}}icon={faTwitter} />
-      <FontAwesomeIcon style={{color:'springgreen',fontSize:'30px'}}icon={faWhatsapp} />
+            <div className='font-awesome-icons'>
+              <FontAwesomeIcon style={{ color: 'springgreen', fontSize: '30px' }} icon={faComment} />
+              <FontAwesomeIcon style={{ color: 'blue', fontSize: '30px' }} icon={faTwitter} />
+              <FontAwesomeIcon style={{ color: 'springgreen', fontSize: '30px' }} icon={faWhatsapp} />
+              <FontAwesomeIcon style={{ color: 'blue', fontSize: '30px' }} icon={faEnvelope} />
+            </div>
             {/* <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
