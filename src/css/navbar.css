@@ -14,8 +14,9 @@ margin-bottom: 7px;
 
 .font-awesome-icons{
     display: flex;
-}
+    gap: 20px;
 
+}
 
 .all-links{
     color: grey;
@@ -27,3 +28,10 @@ margin-bottom: 7px;
     text-decoration: underline;
 }
 
+
+@media screen and (max-width:600px) {
+    .font-awesome-icons{
+        gap:0px
+    }
+    
+}
