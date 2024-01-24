@@ -62,23 +62,26 @@ const Properties = () => {
             <div className="text-underlined">Properties for Rent</div>
             </div>
             <div style={{margin:'20px'}}>
+          
             {images.map((item, index) => {
                 if (index % 2 === 0) {
                     return (
                         <Grid container spacing={4} key={index}>
                             <Grid item xs={12} sm={6}>
-                                <img src={item.image} alt={`p1 image`} className="property-image" />
+                                {/* Use the Image component instead of img tag */}
+                                <Image src={item.image} alt={`p1 image`} className="property-image" width={500} height={300} />
                                 {item.address}
-                                  <div style={{color:'blue',fontsize:'5px'}}>View location On Map<PublicIcon color="primary" onClick={() => { handlemap(item.address) }} /></div>
-                                <h3>price  {item.price}</h3>
-                                <Button style={{marginBottom:'10px'}} variant="contained" onClick={() => { handlebook(index + 1) }}>Book a Viewing</Button>
+                                <div style={{ color: 'blue', fontsize: '5px' }}>View location On Map<PublicIcon color="primary" onClick={() => { handlemap(item.address) }} /></div>
+                                <h3>price {item.price}</h3>
+                                <Button style={{ marginBottom: '10px' }} variant="contained" onClick={() => { handlebook(index + 1) }}>Book a Viewing</Button>
                             </Grid>
                             {index + 1 < images.length && (
                                 <Grid item xs={12} sm={6}>
-                                    <img src={images[index + 1].image} alt={`House ${images[index + 1].image}`} className="property-image" />
+                                    {/* Use the Image component instead of img tag */}
+                                    <Image src={images[index + 1].image} alt={`House ${images[index + 1].image}`} className="property-image" width={500} height={300} />
                                     {images[index + 1].address}
-                                    <div style={{color:'blue',fontsize:'5px'}}>View location On Map<PublicIcon color='primary' onClick={() => { handlemap(images[index + 1].address) }} /></div>
-                                    <h3>price  {item.price}</h3>
+                                    <div style={{ color: 'blue', fontsize: '5px' }}>View location On Map<PublicIcon color='primary' onClick={() => { handlemap(images[index + 1].address) }} /></div>
+                                    <h3>price {item.price}</h3>
                                     <Button variant="contained" onClick={() => { handlebook(index + 1) }}>Book a Viewing</Button>
                                 </Grid>
                             )}
