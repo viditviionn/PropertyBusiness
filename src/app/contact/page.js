@@ -6,7 +6,6 @@ import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
 import PublicIcon from '@mui/icons-material/Public';
 import Button from '@mui/material/Button';
-import Datepicker from '../../components/Datepicker'
 import MenuItem from '@mui/material/MenuItem';
 
 import HouseIcon from '@mui/icons-material/House';
@@ -194,18 +193,4 @@ export default function Page({ repo }) {
 
     
 }
-// export async function getServerSideProps() {
-//     // Fetch data from external API
 
-//     try{
-//         const res = await fetch('/api/emailsend',data_to_be_sent)
-//         const repo = await res.json()
-//     }
-//     catch(error){
-//         const repo=error;
-//     }
-   
-//     // Pass data to the page via props
-//     return { props: { repo } }
-//   }
-   

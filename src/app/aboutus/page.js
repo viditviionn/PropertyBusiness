@@ -45,7 +45,7 @@ export default function aboutus() {
 
 
                 <Grid item xs={12} sm={6} lg={6} md={6}>
-                    <Image src={p5} />
+                    <Image src={p5} alt="Image" />
 
                 </Grid>
             </Grid>

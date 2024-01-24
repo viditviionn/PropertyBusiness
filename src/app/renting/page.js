@@ -7,14 +7,12 @@ import { Box, Button, Grid } from "@mui/material";
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import BasicCard from "../../components/SellingCard";
-import { grey } from "@mui/material/colors";
 import DirectionsWalkSharpIcon from '@mui/icons-material/DirectionsWalkSharp';
 import DirectionsRunSharpIcon from '@mui/icons-material/DirectionsRunSharp';
 import DirectionsBikeSharpIcon from '@mui/icons-material/DirectionsBikeSharp';
 
 
-export default function page() {
+export default function Page() {
 
     const router = useRouter();
 
@@ -52,7 +50,7 @@ export default function page() {
 
             <div className="image25-content75" >
                 <div className="wid-25">
-                    <Image className="small-image" src={selling_small} />
+                    <Image className="small-image" src={selling_small} alt="image" />
 
                 </div>
                 <div className="wid-75">
