@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
-import { Grid, TextField, Typography } from '@mui/material';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
 import '../../css/contact.css'
 import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -9,11 +10,10 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
 import HouseIcon from '@mui/icons-material/House';
-import { useSearchParams, usePathname } from 'next/navigation';
 import axios from 'axios'
 
 
-export default function Page({ repo }) {
+export default function Page() {
 
     const [message_sent,setMessage_sent]=useState(false)
 
