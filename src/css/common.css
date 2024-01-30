@@ -17,12 +17,7 @@ img{
     font-weight: 700;
     margin-left: 30px;
 }
-.css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
-    font-size: large;
-    background-color: transparent;
-    color: #21f36b; /* Change this color to match your outlined button color */
-    border: 2px solid #2196F3; /* Change this color to match your outlined button color */
-}
+
 
 .image-button{
     position: absolute;
@@ -73,6 +68,14 @@ p {
     background-color: rgb(29, 29, 208); /* Adjust this value to set the color of the underline */
   }
 
+  .css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
+    font-size: large !important;
+    background-color: transparent !important ;
+    color: #21f36b !important; /* Change this color to match your outlined button color */
+    border: 2px solid #2196F3 !important; /* Change this color to match your outlined button color */
+}
+
+
 .wid-25{
     width: 25%;
 }
@@ -101,16 +104,23 @@ p {
     justify-content: flex-end;
 }
 
-.button-green{
-    background-color: springgreen;
 
-}
+.button-green {
+    background-color: springgreen !important;
+
+} 
+
+
+
+
+
 .button-green:hover{
- font-size: large;
-    background-color: transparent;
-    color: #64d7e1; /* Change this color to match your outlined button color */
-    border: 2px solid #2196F3; /* Change this color to match your outlined button color */
+ font-size: large !important;
+    background-color: transparent !important;
+    color: #64d7e1 !important; /* Change this color to match your outlined button color */
+    border: 2px solid #2196F3 !important; /* Change this color to match your outlined button color */
 }
+
 
 
 .css-a5rdam-MuiGrid-root {
