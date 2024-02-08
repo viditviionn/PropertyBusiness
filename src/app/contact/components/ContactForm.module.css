@@ -73,3 +73,16 @@
     height: 2px; /* Adjust this value to control the thickness of the underline */
     background-color: rgb(29, 29, 208); /* Adjust this value to set the color of the underline */
   }
+  .contact-p{
+    width: 100%;
+  }
+
+  @media screen and (max-width: 720px) {
+    .contactForm {
+      width: 90%;
+      margin-bottom: 30px;
+    }
+    .contact-p{
+      width: 100%;
+    }
+  }

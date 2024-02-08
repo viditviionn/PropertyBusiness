@@ -197,22 +197,75 @@ margin-left: 0px;
     margin-bottom: -10px;
   }
 
+  .container-about{
+    margin: 30px;
+  }
+  .we-help-wrap{
+    width: 90%;
+  }
 @media screen and (max-width:600px) {
     .image-text{
         font-size:20px
     }
     .image-button button{
-        width: 50%;
-        height:50%;
+        /* width: 50%;
+        height:50%; */
         font-size:50%;
-        border-radius: 50%;
     }
     .image-button button:hover{
-        width: 50%;
-        height:50%;
+        /* width: 50%;
+        height:50%; */
         font-size:75%;
-        border-radius: 50%;
     }
+    .slider-box{
+      width: 100%;
+    }
+    .calclulate-text{
+      font-size: 10px;
+    }
+}
+
+@media screen and (max-width:750px) {
+  .image-text{
+      font-size:20px;
+      width: 80%;
+  }
+  .image-button button{
+      /* width: 50%;
+      height:50%; */
+      font-size:50%;
+  }
+  .image-button button:hover{
+      /* width: 50%;
+      height:50%; */
+      font-size:75%;
+  }
+  .content-button-wrapper{
+    flex-direction: column;
+  }
+  .paragraph1 {
+    width: 120%;
+    margin-left: 10px;
+  }
+
+}
+
+@media screen and (max-width:1200px) {
+  .small-image-div{
+    display: none;
+  }
+  .rentingout-content-wrap{
+    width: 100%;
+  }
+  .rentingout-content-wrap p{
+    margin-left: 10px;
+  }
+  .container-about{
+    margin: 10px;
+  }
+  .imageaboutus{
+    display: none;
+  }
 }
 
 /* footer media query likkni h abi */

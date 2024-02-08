@@ -14,7 +14,7 @@ export default function Home() {
 
   const handleNavigation = () => {
     // Example: Navigate to the '/about' page
-    router.push("/contact/meetingform");
+    router.push("/contact");
   };
 
   return (
@@ -34,7 +34,7 @@ export default function Home() {
       <div className="content-written">
         <div className="content-button-wrapper">
           <div className="wid-75">
-            <p>
+            <p className="paragraph1">
               Whether you have just moved to the Netherlands and about to rent
               or have been here for a few years and are ready to buy a new home,
               we are here for you. Our packages for buying, selling, renting out
@@ -47,14 +47,14 @@ export default function Home() {
               agents that will help you with everything you need.
             </p>
           </div>
-          <div className="button-group-right wid-25">
-            <Button style={{ margin: "10px" }} variant="contained">
+          <div className="button-group-right">
+            <Button className="actionButton" style={{ margin: "10px" }} variant="contained">
               Contact Us
             </Button>
-            <Button style={{ margin: "10px" }} variant="contained">
+            <Button className="actionButton" style={{ margin: "10px" }} variant="contained">
               Send Us message
             </Button>
-            <Button style={{ margin: "10px" }} variant="contained">
+            <Button className="actionButton" style={{ margin: "10px" }} variant="contained">
               Request a Service
             </Button>
           </div>

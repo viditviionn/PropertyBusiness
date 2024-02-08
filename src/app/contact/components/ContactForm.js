@@ -1,5 +1,6 @@
 // components/ContactForm.js
 // import styles from './ContactForm.module.css'; // Importing the CSS module
+import { Button } from '@mui/material';
 import styles from './ContactForm.module.css'; // Importing the CSS module
 
 export default function ContactForm() {
@@ -8,7 +9,7 @@ export default function ContactForm() {
       {/* <h2>Contact form</h2> */}
       <div className={styles.detailheading}>Contact form</div>
 
-      <p>Do you have questions about any of our products and services? You can either call us directly or complete the form below and we promise to call you back within 1 hour during office hours. Outside of office hours we will respond by email, or if it's urgent, we will call you.</p>
+      <div className='contact-p'>Do you have questions about any of our products and services? You can either call us directly or complete the form below and we promise to call you back within 1 hour during office hours. Outside of office hours we will respond by email, or if it's urgent, we will call you.</div>
       <form>
         <div className={styles.formGroup}>
           <label htmlFor="name">Name:</label>
@@ -35,7 +36,10 @@ export default function ContactForm() {
           <label htmlFor="message">Message:</label>
           <textarea id="message"></textarea>
         </div>
-        <button className='button' type="submit">Send message</button>
+        {/* <button className='button' type="submit">Send message</button> */}
+        <Button  variant="contained">
+            Send message
+          </Button>
       </form>
     </div>
   );

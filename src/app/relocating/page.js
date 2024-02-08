@@ -15,7 +15,7 @@ export default function Page() {
 
   const handleNavigation = () => {
     // Example: Navigate to the '/about' page
-    router.push("/contact/meetingform");
+    router.push("/contact");
   };
 
   return (
@@ -58,10 +58,10 @@ export default function Page() {
           <div className="text-underlined">How Can we Help You ?</div>
         </div>
         <div className="image25-content75">
-          <div className="wid-25" style={{ margin: "20px", marginTop: "30px" }}>
+          <div className="wid-25 small-image-div" style={{ margin: "20px", marginTop: "30px" }}>
             <Image className="small-image" src={selling_small} alt="image" />
           </div>
-          <div className="wid-75">
+          <div className="wid-75 rentingout-content-wrap">
             <p>
               Are you relocating to the Netherlands and searching for help to
               arrange the relocation?

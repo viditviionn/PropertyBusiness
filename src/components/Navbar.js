@@ -22,7 +22,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faComment, faCheck, faEnvelope, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faFontAwesome, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
-const pages = ['Buying', 'Selling', 'RentingOut', 'Properties', 'Relocating', 'Aboutus', 'Contact'];
+const pages = ['Buying', 'Selling', 'RentingOut', 'Properties', 'Relocating', 'AboutUs', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
@@ -51,7 +51,7 @@ function Navbar() {
     <AppBar position="static" style={{ backgroundColor: 'white', boxShadow: 'none' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link href='/'><House sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: '45px', color: 'blue' }} /></Link>
+          <Link href='/'><House sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: '45px', color: '#6ea5ff' }} /></Link>
           <Typography
             variant="h6"
             noWrap
@@ -63,9 +63,11 @@ function Navbar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               fontSize: "2rem",
-              color: 'blue',
+              color: '#6ea5ff',
               textDecoration: 'none',
             }}
+            className='small-property'
+
           >
             Property
           </Typography>
@@ -110,7 +112,6 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          <Link href='/'><House color='primary' sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /></Link>
           <Typography
             variant="h5"
             noWrap
@@ -123,7 +124,7 @@ function Navbar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'Yellowgreen',
+              color: '#6ea5ff',
               textDecoration: 'none',
             }}
           >
@@ -146,10 +147,10 @@ function Navbar() {
           <Box>
 
             <div className='font-awesome-icons'>
-              <FontAwesomeIcon style={{ color: 'blue', fontSize: '30px' }} icon={faComment} />
-              <FontAwesomeIcon style={{ color: 'blue', fontSize: '30px' }} icon={faTwitter} />
-              <FontAwesomeIcon style={{ color: 'blue', fontSize: '30px' }} icon={faWhatsapp} />
-              <FontAwesomeIcon style={{ color: 'blue', fontSize: '30px' }} icon={faEnvelope} />
+              <FontAwesomeIcon style={{ color: '#6ea5ff', fontSize: '30px' }} icon={faComment} />
+              <FontAwesomeIcon style={{ color: '#6ea5ff', fontSize: '30px' }} icon={faTwitter} />
+              <FontAwesomeIcon style={{ color: '#6ea5ff', fontSize: '30px' }} icon={faWhatsapp} />
+              <FontAwesomeIcon style={{ color: '#6ea5ff', fontSize: '30px' }} icon={faEnvelope} />
             </div>
             {/* <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

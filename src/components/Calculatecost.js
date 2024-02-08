@@ -76,7 +76,7 @@ export default function Calculatecost() {
             </div>
 
             Adjust the house price below to calculate the typical costs to buy a house:
-            <Box sx={{ width: 300 }}>
+            <Box sx={{ width: 300 }} className="slider-box">
               <Slider
                 value={value}
                 onChange={handleChange}
@@ -92,8 +92,8 @@ export default function Calculatecost() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button variant='contained' fullWidth onClick={handleClose}>Send Us a Message</Button>
-          <Button variant='contained' fullWidth onClick={handleClose}>Subscribe</Button>
+          <Button className='calclulate-text' variant='contained' fullWidth onClick={handleClose}>Send Us a Message</Button>
+          <Button className='calclulate-text' variant='contained' fullWidth onClick={handleClose}>Subscribe</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>

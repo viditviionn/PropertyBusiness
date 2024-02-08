@@ -24,8 +24,8 @@ export default function aboutus() {
         a fair deal with best value for money services.
       </p>
       <div style={{ marginLeft: 20 }}>
-        <Grid item container style={{ margin: "30px" }}>
-          <Grid sm={6} lg={6} md={6}>
+        <Grid item container className="container-about">
+          <Grid sm={12} lg={6} md={12}>
             <Grid item>
               <div
                 style={{
@@ -78,6 +78,7 @@ export default function aboutus() {
               src={p5}
               alt="Image"
               style={{ height: "100%", width: "90%" }}
+              className="imageaboutus"
             />
           </Grid>
         </Grid>

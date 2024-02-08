@@ -16,7 +16,7 @@ export default function Page() {
 
   const handleNavigation = () => {
     // Example: Navigate to the '/about' page
-    router.push("/contact/meetingform");
+    router.push("/contact");
   };
 
   return (
@@ -69,7 +69,7 @@ export default function Page() {
           {/* <div className="wid-25">
           <Image className="small-image" src={selling_small} alt="image" />
         </div> */}
-          <div className="wid-75">
+          <div className="">
             <p>
               Are you looking to sell your property and need the help of a
               professional real-estate agent?

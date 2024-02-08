@@ -59,9 +59,9 @@ const Properties = () => {
         explain how we can help you.
       </p>
 
-      <Button id="button-left" className="button-green" variant="contained">
+      {/* <Button id="button-left" className="button-green" variant="contained">
         Book a Meeting
-      </Button>
+      </Button> */}
       <div style={{ clear: "both" }}>
         <div className="text-underlined">Properties for Rent</div>
       </div>
@@ -81,7 +81,11 @@ const Properties = () => {
                   />
                   <div style={{ fontSize: "1.5rem" }}>{item.address}</div>
                   <div
-                    style={{ color: "blue", fontsize: "5px", marginTop: '10px' }}
+                    style={{
+                      color: "blue",
+                      fontsize: "5px",
+                      marginTop: "10px",
+                    }}
                     onClick={() => {
                       handlemap(item.address);
                     }}
@@ -112,7 +116,11 @@ const Properties = () => {
                       {images[index + 1].address}
                     </div>
                     <div
-                      style={{ color: "blue", fontsize: "5px", marginTop: '10px' }}
+                      style={{
+                        color: "blue",
+                        fontsize: "5px",
+                        marginTop: "10px",
+                      }}
                       onClick={() => {
                         handlemap(images[index + 1].address);
                       }}
@@ -121,6 +129,7 @@ const Properties = () => {
                     </div>
                     <h3>price {item.price}</h3>
                     <Button
+                      style={{ marginBottom: "10px" }}
                       variant="contained"
                       onClick={() => {
                         handlebook(index + 1);

@@ -9,7 +9,7 @@ margin-bottom: 7px;
 } */
 
 .links-menu{
-    background-color: yellowgreen;
+    background-color: #6ea5ff;
 }
 
 .font-awesome-icons{
@@ -24,18 +24,42 @@ margin-bottom: 7px;
     text-transform: capitalize;
 }
 .all-links:hover {
-    color: yellowgreen;
+    color: #6ea5ff;
     text-decoration: underline;
 }
 
 .activelink {
-    color: yellowgreen;
+    color: #6ea5ff;
     text-decoration: underline;
 }
 
 @media screen and (max-width:600px) {
     .font-awesome-icons{
         gap:0px
+    }
+    .css-19r6kue-MuiContainer-root{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .font-awesome-icons{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:1085px) {
+    /* .font-awesome-icons{
+        gap:0px
+    }
+    .css-19r6kue-MuiContainer-root{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .font-awesome-icons{
+        display: none;
+    } */
+    .small-property{
+        display: none;
     }
     
 }
