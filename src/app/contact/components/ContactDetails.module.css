@@ -1,0 +1,58 @@
+/* components/ContactDetails.module.css */
+.contactDetails {
+    margin-left: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9; /* Adjust the color to match your design */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+
+  }
+  
+  .contactDetails h2 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+  }
+  
+  .contactDetails p,
+  .contactDetails li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Add icons with appropriate styling */
+  .contactDetails .icon {
+    margin-right: 0.5rem;
+  }
+  
+  /* Style for the company details */
+  .companyDetails {
+    margin-top: 1rem;
+  }
+  
+  .officeHours {
+    margin-top: 1rem;
+  }
+  
+  .detailheading {
+    position: relative;
+    display: inline-block;
+    /* padding-left: 10px; */
+    font-size: medium;
+    font-weight: 500;
+    color: #555555;
+    margin-bottom: 20px;
+  }
+  .detailheading::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -10px; /* Adjust this value to control the distance between text and underline */
+    width: 100%;
+    height: 2px; /* Adjust this value to control the thickness of the underline */
+    background-color: rgb(29, 29, 208); /* Adjust this value to set the color of the underline */
+  }
+
+  .detailText {
+    margin-bottom: 10px;
+  }

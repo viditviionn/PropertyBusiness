@@ -22,12 +22,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faComment, faCheck, faEnvelope, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faFontAwesome, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
-const pages = ['Buying', 'Selling', 'RentingOut', 'Renting', 'Properties', 'Relocating', 'Aboutus', 'Contact'];
+const pages = ['Buying', 'Selling', 'RentingOut', 'Properties', 'Relocating', 'Aboutus', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [activeTab, setactiveTab] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -36,8 +37,10 @@ function Navbar() {
   //   setAnchorElUser(event.currentTarget);
   // };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (page) => {
+    console.log(page)
     setAnchorElNav(null);
+    setactiveTab(page)
   };
 
   // const handleCloseUserMenu = () => {
@@ -59,8 +62,8 @@ function Navbar() {
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-              // letterSpacing: '.3rem',
-              color: 'Yellowgreen',
+              fontSize: "2rem",
+              color: 'blue',
               textDecoration: 'none',
             }}
           >
@@ -100,9 +103,9 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={() => handleCloseNavMenu(page)}>
                   <Typography textAlign="center">
-                    <Link className='all-links' href={`/${page.toLowerCase()}`}>{page}</Link></Typography>
+                    <Link className={` ${activeTab === page ? "activelink" : "all-links"}`} href={`/${page.toLowerCase()}`}>{page}</Link></Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -130,10 +133,10 @@ function Navbar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => handleCloseNavMenu(page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link className='all-links' href={`/${page.toLowerCase()}`}>
+                <Link className={`all-links ${activeTab === page && "activelink" }`} href={`/${page.toLowerCase()}`}>
                   {page}
                 </Link>
               </Button>
@@ -143,9 +146,9 @@ function Navbar() {
           <Box>
 
             <div className='font-awesome-icons'>
-              <FontAwesomeIcon style={{ color: 'springgreen', fontSize: '30px' }} icon={faComment} />
+              <FontAwesomeIcon style={{ color: 'blue', fontSize: '30px' }} icon={faComment} />
               <FontAwesomeIcon style={{ color: 'blue', fontSize: '30px' }} icon={faTwitter} />
-              <FontAwesomeIcon style={{ color: 'springgreen', fontSize: '30px' }} icon={faWhatsapp} />
+              <FontAwesomeIcon style={{ color: 'blue', fontSize: '30px' }} icon={faWhatsapp} />
               <FontAwesomeIcon style={{ color: 'blue', fontSize: '30px' }} icon={faEnvelope} />
             </div>
             {/* <Tooltip title="Open settings">

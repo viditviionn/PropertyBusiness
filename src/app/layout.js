@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
 
       <body className={inter.className}>
         
-        <header style={{backgroundColor:'white'}}>
+        <header style={{backgroundColor:'white', marginRight: 40, marginLeft: 40}}>
         <Navbar />
         </header>
         {children}

@@ -21,13 +21,17 @@ margin-bottom: 7px;
 .all-links{
     color: grey;
     text-decoration: none;
-
+    text-transform: capitalize;
 }
 .all-links:hover {
     color: yellowgreen;
     text-decoration: underline;
 }
 
+.activelink {
+    color: yellowgreen;
+    text-decoration: underline;
+}
 
 @media screen and (max-width:600px) {
     .font-awesome-icons{

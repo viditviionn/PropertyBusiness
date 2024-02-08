@@ -100,6 +100,75 @@ a {
   text-decoration: none;
 }
 
+/* Style the scrollbar: always present but discreet */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  background-color: rgba(0,0,0,0); /* transparent background */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2); /* semi-transparent thumb */
+}
+
+/* Style the scrollbar on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,0.5); /* more visible on hover */
+}
+
+/* Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.2) transparent; /* thumb and track color */
+}
+
+/* Add this to the element that scrolls */
+.custom-scrollbar {
+  overflow-y: auto;
+}
+
+/* styles/contact.module.css */
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.contactForm,
+.contactDetails {
+  width: 48%;
+}
+
+.contactForm h2,
+.contactDetails h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #0044cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003399;
+}
+
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
